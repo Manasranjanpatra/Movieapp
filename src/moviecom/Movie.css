@@ -2,14 +2,57 @@
     margin:0;
     padding:0;
 }
+body{
+    background-color: aquamarine;
+}
 .search{
+    
+    margin: auto;
     display:flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height:4rem;
-    width:2.2rem;
+    margin-top: 1rem;
+    height:2rem;
+    width:12rem;
     cursor:pointer;
-    scale:1.1;
+    /* scale:1.1; */
+    border:2px solid black;
+    background-color: aliceblue;
+
+}
+#value{
+    width:10rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    /* color: black; */
+    /* text-transform: capitalize; */
+   
+
+}
+.middle{
+    text-align: center;
+    color:red;
+}
+
+.single{
+    width:60rem;
+}
+.card{
+    width:18rem;
+}
+@media (max-width:400px){
+    .card{
+        width:21rem;
+        margin-bottom: 0.5rem;
+    }
+    .single{
+        width: 100%;
+        /* margin:  0  0.9rem; */
+        padding: 0 1rem;
+        margin-top: 1rem;
+    }
+        
 
 }

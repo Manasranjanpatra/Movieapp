@@ -1,5 +1,6 @@
-import React, { useContext } from 'react'
+import React  from 'react'
 // import { AppContext } from './Context'
+import "./Movie.css"
 
 
 const Hoome = (props) => {
@@ -10,7 +11,7 @@ const Hoome = (props) => {
   return (
 
    
-            <div className="card " style={{ width: "18rem" }}>
+            <div className="card " >
               <img src={props.Poster} className="card-img-top" alt="" />
               <div className="card-body">
                 <h5 className="card-title">{props.movie}</h5>

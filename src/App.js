@@ -1,25 +1,29 @@
 import React from 'react'
 import'./App.css'
 // import News  from './components/News'
-// import Hoome from './moviecom/Hoome'
-import { AppProvider } from './moviecom/Context'
+import Hoome from './moviecom/Hoome'
 import Movies from './moviecom/Movies'
-// import Search from './moviecom/Search'
-// import Search from './moviecom/Search'
-// import {BrowserRouter,Routes,Route} from "react-router-dom";
-import Indexx from './Counter/Indexx';
+import {BrowserRouter,Routes,Route, Router} from "react-router-dom";
+import Singlemovie from './moviecom/Singlemovie'
+// import Indexx from './Counter/Indexx';
 
 
 
 function App() {
   return (
     <div>
-      {/* <AppProvider>
-     
-      <Search/> 
-       <Movies/>
-       </AppProvider> */}
-       <Indexx/>
+    
+      {/* <Search/>  */}
+      
+       <BrowserRouter>
+        <Routes>
+          <Route path="/" element={ <Movies/>}></Route>
+          <Route path="/movie/:id" element={<Singlemovie/>}></Route>
+        </Routes>
+       </BrowserRouter>
+       
+      
+       {/* <Indexx/> */}
 
 
 
