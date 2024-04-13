@@ -1,7 +1,7 @@
 import React from 'react'
 import'./App.css'
 // import News  from './components/News'
-import Hoome from './moviecom/Hoome'
+
 import Movies from './moviecom/Movies'
 import {BrowserRouter,Routes,Route, Router} from "react-router-dom";
 import Singlemovie from './moviecom/Singlemovie'
