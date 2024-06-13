@@ -14,9 +14,10 @@ const Hoome = (props) => {
             <div className="card " >
               <img src={props.Poster} className="card-img-top" alt="" />
               <div className="card-body">
-                <h5 className="card-title">{props.movie}</h5>
-                <p className="card-text">{props.id}</p>
-                <p className="card-text">{props.year}<small className="text-muted">By {props.hour}</small></p>
+                <h2 className="card-title"> Movie Name:{props.movie}</h2>
+                <h4 className="card-text">Movie Year: {props.year}</h4>
+                <h4 className="card-text">Movie Id: {props.id}</h4>
+               
               </div>
             </div>
 

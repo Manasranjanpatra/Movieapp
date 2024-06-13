@@ -1,15 +1,15 @@
-import React, { useState, useEffect, createElement } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import {  useParams, useNavigate } from "react-router-dom";
 import "./Movie.css";
 
 const Singlemovie = () => {
   const { id } = useParams();
   const [text, setText] = useState([]);
-  let copy = true;
+
   let navigate = useNavigate();
 
   const news = async () => {
-    let url = `http://www.omdbapi.com/?apikey=720508f7&i=${id}`;
+    let url = `https://www.omdbapi.com/?apikey=720508f7&i=${id}`;
     let data = await fetch(url);
     let persedata = await data.json();
     console.log(persedata);
@@ -22,12 +22,12 @@ const Singlemovie = () => {
   useEffect(() => {
     let onetime = setTimeout(() => {
       news();
-    }, 100);
+    }, 0.1);
     return () => clearTimeout(onetime);
   }, [id]);
   return (
-    <div>
-      <div className="card  single ">
+    <div className="single">
+      <div className="card   ">
         <img src={text.Poster} className="card-img-top" alt="" />
         <div className="card-body">
           <h5 className="card-title">{text.Title}</h5>
@@ -36,7 +36,7 @@ const Singlemovie = () => {
          
 
           <p className="card-text">
-            {text.Year}
+            {text.Released}
             <small className="text-muted">By {text.DVD}</small>
           </p>
         </div>

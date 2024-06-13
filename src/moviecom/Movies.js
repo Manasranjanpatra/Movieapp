@@ -14,7 +14,7 @@ function Movies() {
   const [value, setValue] = useState("titanic");
   let copy = true
   const news = async () => {
-    let url = `http://www.omdbapi.com/?apikey=720508f7&s=${value}`;
+    let url = `https://www.omdbapi.com/?apikey=720508f7&s=${value}`;
     let data = await fetch(url);
 
     let persedata = await data.json();
@@ -35,7 +35,7 @@ function Movies() {
   useEffect(() => {
     let outfit = setTimeout(() => {
       news();
-    }, 50);
+    }, 0.1);
     return ()=>clearTimeout(outfit);
   }, [value]);
 
@@ -58,12 +58,12 @@ function Movies() {
         />
         <i  className="fa-solid fa-magnifying-glass" onClick={inchange}></i>
       </div>
-     <p class="middle">{message}</p>
+     <p className="middle">{message}</p>
       <div className="container  my-3 justify-content-center">
         <div className="row">
           {text.map((element,index) => {
             return (
-              <div class=" col md-4   " id={index} >
+              <div className=" col md-4   " id={index}  key={index} >
               
                 <Link to={`/movie/${element.imdbID}`}>
                   <Hoome
